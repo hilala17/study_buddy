@@ -1,0 +1,158 @@
+{% extends "base/base.html" %}
+{% load staticfiles i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+
+{% block content %}
+
+            {% if request.user.is_authenticated %}
+                                
+                        <div class="col-md-4 col-sm-4">
+                        
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-4">
+                            <div class="card animation-demo">
+                                
+
+                                <div class="card-body card-padding contacts">
+                                    <!--<img src="{% static 'images/demo/contacts/1.jpg' %}" alt="">-->
+                                    
+                                    <div class="c-item">
+                                        <div class='swipe'>
+                                        <a id='profile_img_p' href="" class="ci-avatar">
+                                            <img id="profile_img", src="{% static 'images/demo/contacts/1.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong id='name'>Cathy Shelton</strong>
+                                            <small id='info1'>COS217 - Introduction to Programming Systems</small>
+                                        </div>
+                                        </div>
+                                        <div class="c-footer">
+                                            
+                                            <div class="row animation-demo">
+
+                                                <div class="col-xs-2 pull-left m-10 m-b-0 p-10 p-b-0">
+                                                    <button id="fadeOutLeft" class="btn bgm-red btn-icon waves-effect waves-circle waves-float"><i class="zmdi zmdi-close"></i></button>
+                                                </div>
+                                                
+                                                <div class="col-xs-2">
+                                                </div>
+        
+                                                <div class="col-xs-2 pull-right m-10 m-b-0 p-10 p-b-0">
+                                                    <button id="fadeOutRight" class="btn bgm-green btn-icon waves-effect waves-circle waves-float"><i class="zmdi zmdi-check"></i></button>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 col-sm-4">
+                    
+                        </div>
+            {% else %}
+            
+            <div class="col-md-4 col-sm-4">
+                        
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-4">
+                            <h3>Please Log In</h3>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-4">
+                        
+                        </div>
+                
+            
+            
+            {% endif %}
+
+
+
+{% endblock %}
+
+
+{% block scripts %}
+
+    {% if request.user.is_authenticated %}
+
+
+ <script type="text/javascript">
+            $(document).ready(function(){
+                
+                var first_names = ['Michael', 'Paul', 'Richard', 'Adam', 'Allen', 'Allison', 'Samantha', 'Adam', 'Annette', 'Kevin', 'Anthony', 'Tonya', 'Brianna', 'Shelley', 'Casey', 'Toni', 'Stephanie', 'Gary', 'Alicia', 'Jasmine', 'Lauren', 'Katherine', 'Terri', 'Jeffrey', 'Mario', 'Kathleen', 'Susan', 'Mason', 'David', 'Jamie', 'Megan', 'Christopher', 'Anthony', 'Joshua', 'Christopher', 'Charlene', 'Justin', 'Robert', 'Victor', 'David', 'Johnny', 'Carla', 'Darlene', 'Jillian', 'Jesus', 'Michele', 'Catherine', 'Sean', 'Steven', 'Rhonda', 'Nicholas', 'Collin', 'Jesse', 'Carolyn', 'Jeffrey', 'Krista', 'Kevin', 'Sara', 'George', 'Jody', 'Gregory', 'Jennifer', 'Randall', 'Jennifer', 'Tara', 'Arthur', 'Lynn', 'Sean', 'Tara', 'Cory', 'Maureen', 'Victor', 'Stacy', 'Jennifer', 'Jeffrey', 'Jimmy', 'Jesse', 'Michael', 'Taylor', 'Melissa', 'Alyssa', 'Mary', 'Carla', 'Lisa', 'Diana', 'Christopher', 'Vanessa', 'Jacob', 'Derek', 'Lindsay', 'Ryan', 'John', 'Nicole', 'Derek', 'Madison', 'Brandi', 'Emily', 'Barbara', 'Jason', 'Hannah'];  
+                var last_names = ['Lewis', 'Morris', 'Wagner', 'Armstrong', 'Pratt', 'Taylor', 'Klein', 'Hicks', 'Foster', 'Collins', 'Wilson', 'Olson', 'Bailey', 'Chang', 'Foley', 'Hill', 'Jones', 'Kaiser', 'Stephens', 'Day', 'Walker', 'Jones', 'Miller', 'Dillon', 'Palmer', 'Harper', 'Watkins', 'Fox', 'Smith', 'Peters', 'Pham', 'Weaver', 'Kim', 'Green', 'Martin', 'Cox', 'Terry', 'Vance', 'Bean', 'Martinez', 'Hunt', 'Rodriguez', 'Shah', 'Spears', 'Alexander', 'Mcclure', 'Wells', 'Meyer', 'Cervantes', 'Franco'];
+
+                var classes = ['COS217 - Introduction to Programming Systems', 'COS352 - Artificial Intelligence and Public Policy', 'COS448 - Innovating Across Technology, Business, and Marketplaces ', 'MAT202 - Linear Algebra'];
+                
+                $('body').on('click', '.animation-demo .btn', function(){
+                    var animation = $(this).attr('id');
+                    var cardImg = $(this).closest('.card').find('.swipe');
+                    
+                    //cardImg.removeAttr('class');
+                    cardImg.addClass('animated '+animation);
+                    animationDuration = 1600;
+                    
+                    
+                    setTimeout(function(){
+                        
+                        var num = Math.floor(Math.random() * 16) + 1; 
+
+                        $('<img src="'+ '/static/images/demo/contacts/'+num+'.jpg' +'">').load(function() {
+                          var w = $('#profile_img').width();
+                          var h = $('#profile_img').height();
+                          $('#profile_img').remove()
+                          $(this).width(w).height(h).appendTo('#profile_img_p');
+                          $(this).attr('id', 'profile_img');
+                          $(this).attr('alt', '');
+                        });
+                        
+                        cardImg.removeClass(animation);
+
+                        
+                        
+                        var first = first_names[Math.floor(Math.random() * first_names.length)];
+                        var last = last_names[Math.floor(Math.random() * last_names.length)];
+                        var classs = classes[Math.floor(Math.random() * classes.length)];
+
+                        var name = first + " " + last;
+                        
+                        
+                        
+                        if (animation == 'fadeOutRight' && Math.random() < 0.35){
+                            swal("Nice! New Buddy: "+$('#name').html(), "You just made a new study buddy, go to your buddies or message", "success")
+                        }
+                        
+                       
+                        $('#name').html(name);
+                        $('#info1').html(classs);
+                        
+                        
+
+
+                    }, animationDuration);
+                    
+                });
+            });
+        </script>
+
+{% endif %}
+
+{% endblock %}

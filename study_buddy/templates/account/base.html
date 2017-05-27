@@ -1,0 +1,59 @@
+{% extends "base_account/base.html" %}
+{% block title %}{% block head_title %}{% endblock head_title %}{% endblock title %}
+
+{% block content %}
+
+<div class="lc-block toggled">
+    <div class="lcb-form">
+    {% block inner %}{% endblock %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %} 
+
+    <script>
+    
+    
+        $( document ).ready(function() {
+            $('#id_username').removeAttr('autofocus')
+            $('#id_first_name').attr('autofocus', 'autofocus')
+            
+            
+            $("label[for='id_login']").hide();
+            $("label[for='id_password']").hide();
+            $("label[for='id_remember']").hide();
+            
+            $("label[for='id_first_name']").hide();
+            $("label[for='id_last_name']").hide();
+            $("label[for='id_username']").hide();
+            $("label[for='id_email']").hide();
+            $("label[for='id_password1']").hide();
+            $("label[for='id_password2']").hide();
+            $("label[for='id_oldpassword']").hide();
+            
+            $("#id_first_name").attr("placeholder", "First Name");
+            $("#id_last_name").attr("placeholder", "Last Name");
+            
+            $("#id_first_name").focus();
+            
+            
+            //reset password
+            $(".btn.btn-primary.waves-input-wrapper.waves-effect").removeAttr('style');
+            $(".waves-input-wrapper").attr('style', "color:rgb(0, 0, 0);background:rgba(0, 0, 0, 0)");
+            
+            $("html,body").scrollTop(0);
+            
+            
+    
+        });
+        
+        
+        
+
+
+    </script>
+    
+    
+
+{% endblock %}

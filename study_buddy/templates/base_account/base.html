@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        {% block head %} {% include 'base/head.html' %} {% endblock %}
+        {% block head_extra %} {% endblock %}
+        <title>{% block title %} [TITLE] {% endblock %}</title>
+
+        <!-- CSS Libraries -->
+        {% block css_vendor %} {% include 'base_account/css_vendor.html' %} {% endblock %}
+        {% block css %} {% endblock %}
+        {% block css_app %} {% include 'base/css_app.html' %} {% endblock %}
+    </head>
+
+    <body>
+        <div class="login-content">
+            
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+
+
+        {% block content %}
+            <h3>[CONTENT]</h3>
+        {% endblock content %}
+
+        {% block modal %}{% endblock modal %}
+
+
+        
+
+        {% block loader %} {% include 'base/page_loader.html' %} {% endblock %}
+    
+        <!-- Older IE warning message -->
+        {% include 'base/oldIEWarning.html' %}
+        <!-- Javascript Libraries -->
+        {% block scripts_vendor %} {% include 'base_account/scripts_vendor.html' %} {% endblock %}
+        {% block scripts %} {% endblock %}
+        <!-- Placeholder for IE9 -->
+        {% include 'base/oldIEPlaceholder.html' %}
+        {% block scripts_app %} {% include 'base/scripts_app.html' %} {% endblock %}
+    </body>
+</html>

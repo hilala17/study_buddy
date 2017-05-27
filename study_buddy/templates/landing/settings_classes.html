@@ -1,0 +1,339 @@
+{% extends "base/base.html" %}
+{% load staticfiles i18n %}
+
+{% block css %}
+<link href="{% static 'vendors/bower_components/datatables.net-dt/css/jquery.dataTables.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block scripts %}
+ <script src="{% static 'vendors/bower_components/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+        <script src="{% static 'vendors/bower_components/moment/min/moment.min.js' %}"></script>
+        <script src="{% static 'vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js' %}"></script>
+
+
+<script type="text/javascript">
+            $(document).ready(function() {
+                $('#data-table-basic').DataTable();
+            } );
+        </script>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  <div class="container container-alt">
+
+                    <div class="block-header">
+                        <h2>{{request.user.first_name}} {{request.user.last_name}}
+                            <small>Computer Science, Princeton</small>
+                        </h2>
+
+                        <ul class="actions m-t-20 hidden-xs">
+                            <li class="dropdown">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a href="">Privacy Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Account Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Other Settings</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card" id="profile-main">
+                        <div class="pm-overview c-overflow">
+
+                            <div class="pmo-pic">
+                                <div class="p-relative">
+                                    <a href="">
+                                        <img class="img-responsive" src="{% static 'images/demo/profile-pics/profile-pic-2.jpg' %}" alt="">
+                                    </a>
+
+                                    <!--<div class="dropdown pmop-message">-->
+                                    <!--    <a data-toggle="dropdown" href="" class="btn bgm-white btn-float z-depth-1">-->
+                                    <!--        <i class="zmdi zmdi-comment-text-alt"></i>-->
+                                    <!--    </a>-->
+
+                                    <!--    <div class="dropdown-menu">-->
+                                    <!--        <textarea placeholder="Write something..."></textarea>-->
+
+                                    <!--        <button class="btn bgm-green btn-float"><i class="zmdi zmdi-mail-send"></i>-->
+                                    <!--        </button>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+
+                                    <a href="" class="pmop-edit">
+                                        <i class="zmdi zmdi-camera"></i> <span
+                                            class="hidden-xs">Update Profile Picture</span>
+                                    </a>
+                                </div>
+
+
+                                <div class="pmo-stat">
+                                    <h2 class="m-0 c-white">24</h2>
+                                    Total Buddies
+                                </div>
+                            </div>
+
+                            <div class="pmo-block pmo-contact hidden-xs">
+                                <h2>Contact</h2>
+
+                                <ul>
+                                    <li><i class="zmdi zmdi-phone"></i> 207 619 2192</li>
+                                    <li><i class="zmdi zmdi-email"></i> {{request.user.email}}</li>
+                                    <li><i class="zmdi zmdi-facebook-box"></i> {{request.user.first_name}}.{{request.user.last_name}}</li>
+                                    <li><i class="zmdi zmdi-twitter"></i> @{{request.user.username}}</li>
+                                    <li>
+                                        <i class="zmdi zmdi-pin"></i>
+                                        <address class="m-b-0 ng-binding">
+                                            1915, Butler
+                                        </address>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="pmo-block pmo-items hidden-xs">
+                                <h2>Buddies</h2>
+
+                                <div class="pmob-body">
+                                    <div class="row">
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/1.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/2.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/3.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/4.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/5.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/6.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/7.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/8.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/1.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/2.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/3.jpg' %}" alt="">
+                                        </a>
+                                        <a href="" class="col-xs-2">
+                                            <img class="img-circle" src="{% static 'images/demo/profile-pics/4.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pm-body clearfix">
+                            <ul class="tab-nav tn-justified">
+                                <li><a href="{% url 'settings' %}">General</a></li>
+                                <li class="active"><a href="{% url 'settings_classes' %}">Classes</a></li>
+                            </ul>
+                            
+                            
+                            
+                             <div class="container">
+                    
+                    <div class="pmb-block">
+                        <div class="pmbb-header">
+                            <h2><i class="zmdi zmdi-folder m-r-10"></i>Search Classes</h2>
+
+                        </div>
+                        
+                        <div class="pmbb-body p-l-30">
+                            <div class="pmbb-view">
+
+                                <div class="table-responsive">
+                                    <table id="data-table-basic" class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>Class</th>
+                                            <th>Name</th>
+                                            <th>Section</th>
+                                            <th>Add / Remove</th>
+                                        </tr>
+                                        </thead>
+                                        <tfoot>
+                                     
+                                        <tr>
+                                            <td>COS217</td>
+                                            <td>Introduction to Programming Systems</td>
+                                            <td>N/A</td>
+                                            <td><button class="btn btn-primary btn-sm">Remove</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>COS352</td>
+                                            <td>Artificial Intelligence and Public Policy</td>
+                                            <td>N/A</td>
+                                            <td><button class="btn btn-primary btn-sm">Remove</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>COS448</td>
+                                            <td>Innovating Across Technology, Business, and Marketplaces</td>
+                                            <td>N/A</td>
+                                            <td><button class="btn btn-primary btn-sm">Remove</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>MAT202</td>
+                                            <td>MAT202 - Linear Algebra</td>
+                                            <td>N/A</td>
+                                            <td><button class="btn btn-primary btn-sm">Remove</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VIS222</td>
+                                            <td>Introduction to Sculpture</td>
+                                            <td>N/A</td>
+                                            <td><button class="btn btn-primary btn-sm">Remove</button></td>
+                                        </tr>
+                               
+                       
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pmb-block">
+                                <div class="pmbb-header">
+                                    <h2><i class="zmdi zmdi-book m-r-10"></i> My Classes</h2>
+
+                                    <ul class="actions">
+                                        <li class="dropdown">
+                                            <a href="" data-toggle="dropdown">
+                                                <i class="zmdi zmdi-more-vert"></i>
+                                            </a>
+
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li>
+                                                    <a data-ma-action="profile-edit" href="">Edit</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pmbb-body p-l-30">
+                                    <div class="pmbb-view">
+                                        <dl class="dl-horizontal">
+                                            <dt>COS217 - Introduction to Programming Systems</dt>
+                                            <dd>Looking for Buddies</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>COS352 - Artificial Intelligence and Public Policy</dt>
+                                            <dd>Looking for Buddies</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>COS448 - Innovating Across Technology, Business, and Marketplaces</dt>
+                                            <dd>Looking for Buddies</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>MAT202 - Linear Algebra</dt>
+                                            <dd>Looking for Buddies</dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt>VIS222 - Introduction to Sculpture</dt>
+                                            <dd>Not Looking for Buddies</dd>
+                                        </dl>
+                                    </div>
+
+                                    <div class="pmbb-edit">
+                                        
+                                        <dl class="dl-horizontal">
+                                            <dt class="p-t-10">COS217 - Introduction to Programming Systems</dt>
+                                            <dd>
+                                                <div class="fg-line">
+                                                    <select class="form-control">
+                                                        <option>Looking for Buddies</option>
+                                                        <option>Not Looking for Buddies</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt class="p-t-10">COS352 - Artificial Intelligence and Public Policy</dt>
+                                            <dd>
+                                                <div class="fg-line">
+                                                    <select class="form-control">
+                                                        <option>Looking for Buddies</option>
+                                                        <option>Not Looking for Buddies</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt class="p-t-10">COS448 - Innovating Across Technology, Business, and Marketplaces</dt>
+                                            <dd>
+                                                <div class="fg-line">
+                                                    <select class="form-control">                                                        <option>Looking for Buddies</option>
+                                                        <option>Not Looking for Buddies</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt class="p-t-10">MAT202 - Linear Algebra</dt>
+                                            <dd>
+                                                <div class="fg-line">
+                                                    <select class="form-control">
+                                                        <option>Looking for Buddies</option>
+                                                        <option>Not Looking for Buddies</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="dl-horizontal">
+                                            <dt class="p-t-10">VIS222 - Introduction to Sculpture</dt>
+                                            <dd>
+                                                <div class="fg-line">
+                                                    <select class="form-control">
+                                                        <option>Looking for Buddies</option>
+                                                        <option>Not Looking for Buddies</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                       
+
+                                        <div class="m-t-30">
+                                            <button class="btn btn-primary btn-sm">Save</button>
+                                            <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+
+
+{% endblock %}

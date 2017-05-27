@@ -1,0 +1,633 @@
+{% extends "base/base.html" %}
+{% load staticfiles i18n %}
+{% block content %}
+   <div class="container container-alt">
+
+                    <div class="block-header">
+                        
+                        <ul class="actions m-t-20 hidden-xs">
+                            <li class="dropdown">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a href="">Privacy Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Account Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Other Settings</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Add button -->
+
+                    <div class="card">
+                        <div class="action-header clearfix">
+                            <div class="ah-label hidden-xs">Buddies</div>
+
+                            <div class="ah-search">
+                                <input type="text" placeholder="Start typing..." class="ahs-input">
+
+                                <i class="ahs-close" data-ma-action="action-header-close">&times;</i>
+                            </div>
+
+                            <ul class="actions">
+                                <li>
+                                    <a href="" data-ma-action="action-header-open">
+                                        <i class="zmdi zmdi-search"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="">
+                                        <i class="zmdi zmdi-time"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="" data-toggle="dropdown" aria-expanded="true">
+                                        <i class="zmdi zmdi-sort"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li>
+                                            <a href="">Last Modified</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Last Edited</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Name</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Date</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="zmdi zmdi-info"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body card-padding">
+
+                            <div class="contacts clearfix row">
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/1.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Cathy Shelton</strong>
+                                            <small>cathy.shelton31@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/2.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Stella Flores</strong>
+                                            <small>stella@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/3.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Marilyn Thomas</strong>
+                                            <small>marilyn@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/4.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Dwight Gilbert</strong>
+                                            <small>dwight@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/5.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Cody Moreno</strong>
+                                            <small>moreno@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/6.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Jamie Freeman</strong>
+                                            <small>freeman@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/7.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Charles Spencer</strong>
+                                            <small>charles@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/8.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Vickie Reed</strong>
+                                            <small>reed@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/9.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Lauren Ruiz</strong>
+                                            <small>ruiz@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/10.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Marlene Vasquez</strong>
+                                            <small>vasquez@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/11.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Loretta Morrisonz</strong>
+                                            <small>morrisonz@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/12.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Yvonne Wood</strong>
+                                            <small>wood@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/13.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Denise Franklin</strong>
+                                            <small>franklin@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/14.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Joseph Gonzalez</strong>
+                                            <small>gonzalez@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/15.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Rick Graham</strong>
+                                            <small>graham@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/16.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Alexander Bailey</strong>
+                                            <small>bailey@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/1.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Cathy Shelton</strong>
+                                            <small>cathy.shelton31@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/2.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Stella Flores</strong>
+                                            <small>stella@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/3.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Marilyn Thomas</strong>
+                                            <small>marilyn@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/4.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Dwight Gilbert</strong>
+                                            <small>dwight@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/5.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Cody Moreno</strong>
+                                            <small>moreno@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/6.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Jamie Freeman</strong>
+                                            <small>freeman@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/7.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Charles Spencer</strong>
+                                            <small>charles@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/8.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Vickie Reed</strong>
+                                            <small>reed@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/9.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Lauren Ruiz</strong>
+                                            <small>ruiz@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/10.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Marlene Vasquez</strong>
+                                            <small>vasquez@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/11.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Loretta Morrisonz</strong>
+                                            <small>morrisonz@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/12.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Yvonne Wood</strong>
+                                            <small>wood@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/13.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Denise Franklin</strong>
+                                            <small>franklin@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{% static 'images/demo/contacts/14.jpg' %}" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Joseph Gonzalez</strong>
+                                            <small>gonzalez@princeton.edu</small>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect"><i class="zmdi zmdi-person-add"></i> Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="load-more">
+                                <a href=""><i class="zmdi zmdi-refresh-alt"></i> Load More...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+{% endblock %}
